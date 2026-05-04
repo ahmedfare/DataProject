@@ -1,26 +1,26 @@
-const button = document.querySelector(".icon-upload"); // ✔ fix
+const button = document.querySelector(".icon-upload"); 
 const container = document.getElementById("container");
 const input = document.querySelector("input");
 const undoBtn = document.getElementById("undoBtn");
+//A7la ta7ya ya Boshmahandes 
 
-// Data Structures
 let queue = [];
 let stack = [];
 
-// Click Events
+
 container.addEventListener("click", (eo) => {
 
-  // Delete (Queue + Stack)
+
   if (eo.target.classList.contains("icon-trash")) {
     const taskElement = eo.target.closest(".task");
 
-    stack.push(taskElement);   // Stack
-    queue.shift();             // Queue
+    stack.push(taskElement);   
+    queue.shift();             
 
     taskElement.remove();
   }
 
-  // Angry → Heart
+
   else if (eo.target.classList.contains("icon-angry2")) {
     eo.target.classList.add("dn");
     eo.target.parentElement.insertAdjacentHTML("beforeend",
@@ -28,7 +28,7 @@ container.addEventListener("click", (eo) => {
     );
   }
 
-  // Heart → Angry
+
   else if (eo.target.classList.contains("icon-heart")) {
     eo.target.classList.add("dn");
     eo.target.parentElement.insertAdjacentHTML("beforeend",
@@ -36,13 +36,13 @@ container.addEventListener("click", (eo) => {
     );
   }
 
-  // Star ON
+  
   else if (eo.target.classList.contains("icon-star") && !eo.target.classList.contains("orange")) {
     eo.target.classList.add("orange");
     container.prepend(eo.target.closest(".task"));
   }
 
-  // Star OFF
+  
   else if (eo.target.classList.contains("icon-star") && eo.target.classList.contains("orange")) {
     eo.target.classList.remove("orange");
     container.append(eo.target.closest(".task"));
@@ -50,7 +50,7 @@ container.addEventListener("click", (eo) => {
 
 });
 
-// Add Task (Queue)
+
 button.addEventListener("click", (eo) => {
   eo.preventDefault();
 
@@ -60,7 +60,7 @@ button.addEventListener("click", (eo) => {
     text: input.value
   };
 
-  queue.push(newTask); // enqueue
+  queue.push(newTask); 
 
   const task = `
   <div class="task">
@@ -78,7 +78,7 @@ button.addEventListener("click", (eo) => {
   input.value = "";
 });
 
-// Undo (Stack)
+
 undoBtn.addEventListener("click", () => {
   if (stack.length > 0) {
     const lastDeleted = stack.pop(); // LIFO
