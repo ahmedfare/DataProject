@@ -1,0 +1,136 @@
+*{
+   font-family: sans-serif;
+   margin: 0;
+   padding: 0; 
+}
+body{
+  background-color: #352f5b;  
+  color: white;
+}
+h1{
+   text-align: center;
+   font-size: 4rem;
+   margin-top: 50px; 
+}
+.task{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background: rgba(172, 214, 221, 0.25);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 3px solid #fff ;
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    font-size: 22px;
+}
+
+.icon:hover{
+   font-size: 26px;
+   transition: 0.2s;
+   cursor: pointer; 
+}
+.icon-star , .icon-trash{
+   opacity: 0.4; 
+   font-size: 27px;
+}
+.icon-star:hover{
+   opacity: 1;
+   font-size: 29px;
+}
+.icon-trash{
+    margin-right: 10px;
+    font-size: 27px;
+}
+.icon-trash:hover{
+    font-size: 29px;
+    color: rgb(255, 242, 217);
+    opacity: 1;
+}
+.icon-angry2{
+    color: rgb(247, 219, 97);
+   font-size: 24px; 
+}
+h2{
+  font-size: 40px;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 50px;  
+}
+form{
+   text-align: center;
+   margin-bottom: 200px; 
+}
+input{
+ padding: 15px 20px;
+ width: 35vw;
+ font-size: 21px;
+ border-radius: 7px; 
+ text-align: center;  
+}
+button{
+   all: unset; 
+}
+.icon-upload{
+   font-size: 40px;
+margin-left: 17px;
+position: relative;
+top: 8px;
+}
+.icon-upload:hover{
+   font-size: 43px;
+   transition: 0.3s;
+   color: rgb(103, 224, 164); 
+}
+.dn{
+  display: none;
+
+}
+.icon-heart{
+  font-size: 23px;
+  color: red;
+}
+.icon-heart:hover{
+  font-size: 25px;
+  transition: 0.3s; 
+}
+.finish{
+  text-decoration-line: line-through ;
+  text-decoration-style: wavy; 
+}
+.orange{
+  color: orange;
+  opacity: 1; 
+}
+.undo-container {
+  text-align: center;
+}
+
+.undo-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.undo-btn:hover {
+  background-color: white;
+  color: #352f5b;
+  transition: 0.3s;
+}
+.hello{
+   display: flex;
+   justify-content: center;
+}
